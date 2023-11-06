@@ -3,7 +3,7 @@ class Lotto {
 
   constructor(numbers) {
     this.#validate(numbers);
-    this.#numbers = numbers;
+    this.#numbers = this.#sortNumbers(numbers);
   }
 
   #validate(numbers) {
@@ -26,6 +26,10 @@ class Lotto {
         throw new Error(`[ERROR] 로또 번호는 정수여야 합니다. (잘못된 번호: ${number})`);
       }
     }
+  }
+
+  #sortNumbers(numbers) {
+    return numbers.slice().sort((a, b) => a - b);
   }
 
   // TODO: 추가 기능 구현
