@@ -35,38 +35,20 @@ class Lotto {
   getNumbers() {
     return this.#numbers;
   }
-  // TODO: 추가 기능 구현
-}
 
-try {
-  const validLotto = new Lotto([1, 2, 3, 4, 5, 6]);
-  console.log(validLotto); 
-} catch (error) {
-  console.error(error.message);
-}
+  static generateRandomNumbers() {
+    const randomNumbers = [];
 
-try {
-  const invalidLotto1 = new Lotto([1, 2, 3, 4, 5]); 
-} catch (error) {
-  console.error(error.message);
-}
+    while (randomNumbers.length < 6) {
+      const randomNumber = Math.floor(Math.random() * 45) + 1;
 
-try {
-  const invalidLotto2 = new Lotto([1, 2, 3, 4, 5, 60]); 
-} catch (error) {
-  console.error(error.message);
-}
+      if (!randomNumbers.includes(randomNumber)) {
+        randomNumbers.push(randomNumber);
+      }
+    }
 
-try {
-  const invalidLotto3 = new Lotto([1, 2, 3, 4, 5, 1.5]); 
-} catch (error) {
-  console.error(error.message);
-}
-
-try {
-  const invalidLotto4 = new Lotto([1, 2, 3, 4, 5, 5]); 
-} catch (error) {
-  console.error(error.message);
+    return randomNumbers;
+  }
 }
 
 export default Lotto;
