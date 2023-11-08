@@ -1,12 +1,14 @@
-import getPurchaseAmount from './getPurchaseAmount.js';
-import getWinningNumbers from './getWinningNumbers.js';
-import getBonusNumber from './getBonusNumber.js';
+import getPurchaseAmount from './input/getPurchaseAmount.js';
+import getBonusNumber from './input/getBonusNumber.js';
+import getWinningNumbers from './input/getWinningNumbers.js';
+import outputPurchaseAmount from './outputPurchaseAmount.js';
 
 import Lotto from './Lotto.js';
 
 class App {
   async play() {
     const purchaseAmount = await getPurchaseAmount();
+    outputPurchaseAmount(purchaseAmount);
     const winningNumbers = await getWinningNumbers();
     const bonusNumber = await getBonusNumber();
 
