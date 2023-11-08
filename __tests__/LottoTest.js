@@ -52,4 +52,10 @@ describe("로또 클래스 테스트", () => {
       expect(lotto.getNumbers()).toStrictEqual([1, 2, 3, 4, 5, 6]);
     });
   });
+
+  describe('로또 금액 입력 예외 처리 테스트', () =>{
+    test('입력값이 공백일 경우 예외 발생', () => {
+      
+    })
+  })
 });

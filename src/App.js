@@ -1,4 +1,7 @@
-import { getPurchaseAmount, getWinningNumbers, getBonusNumber } from './input.js';
+import getPurchaseAmount from './getPurchaseAmount.js';
+import getWinningNumbers from './getWinningNumbers.js';
+import getBonusNumber from './getBonusNumber.js';
+
 import Lotto from './Lotto.js';
 
 class App {
