@@ -4,7 +4,7 @@ async function getPurchaseAmount() {
   let purchaseAmount;
 
   while (true) {
-    const input = await Console.readLineAsync('구입 금액을 입력해 주세요: ');
+    const input = await Console.readLineAsync('구입 금액을 입력해 주세요.\n');
 
     if (!input.trim()) {
       console.log("[ERROR] 입력값이 공백입니다. 다시 입력해 주세요.");
