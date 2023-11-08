@@ -35,20 +35,6 @@ class Lotto {
   getNumbers() {
     return this.#numbers;
   }
-
-  static generateRandomNumbers() {
-    const randomNumbers = [];
-
-    while (randomNumbers.length < 6) {
-      const randomNumber = Math.floor(Math.random() * 45) + 1;
-
-      if (!randomNumbers.includes(randomNumber)) {
-        randomNumbers.push(randomNumber);
-      }
-    }
-
-    return randomNumbers;
-  }
 }
 
 export default Lotto;
